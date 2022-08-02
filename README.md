@@ -12,7 +12,7 @@ The public key can be used to encrypt secrets.
 
 The private key can be used to decrypt secrets, provide you are able to gather 3 of the 5 passphrase's pieces.
 
-The pieces can be gathered remotly, using a secure TCP tunnel.
+The pieces can be gathered remotely, using a secure TCP tunnel.
 
 ## Getting started
 
