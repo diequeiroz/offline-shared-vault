@@ -29,7 +29,8 @@ sock.listen(3)
 # loop waiting for connections (terminate with Ctrl-C)
 pieces = []
 
-print("Waiting for clients to send pieces...")
+if sys.stdout.isatty():
+    print("Waiting for clients to send pieces...")
 
 try:
     while 1:
@@ -39,7 +40,8 @@ try:
         pieces.append(receivedData)
         newSocket.send("Thanks!!\n".encode())
         newSocket.close(  )
-        print("Received %s of 3 pieces!" % len(pieces))
+        if sys.stdout.isatty():
+            print("Received %s of 3 pieces!" % len(pieces))
         if len(pieces) >= 3: break
 finally:
     sock.close(  )
@@ -56,5 +58,6 @@ with open('gen/masterkey.pem') as privatefile:
 	privateKey = load_pem_private_key(privatefile.read().encode(), str.encode(output))
 
 decMessage = privateKey.decrypt(secret, padding.PKCS1v15())
-
-print("\n\nSecret:\n\n" + decMessage.decode("utf-8"))
+if sys.stdout.isatty():
+    print("Secret:")
+print(decMessage.decode("utf-8"))

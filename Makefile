@@ -1,5 +1,5 @@
 install: 
-	brew install ssss socat
+	brew install ssss socat ngrok
 	pip install cryptography
 	
 setup:
