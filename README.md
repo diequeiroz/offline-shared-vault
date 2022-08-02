@@ -42,7 +42,7 @@ Store the encrypted base64 string
 
 Enter 3 pieces of the passphrase
 
-Using the remote method:
+#### Using the remote method:
 
 `bin/remote-decrypt <base64 string>`
 
