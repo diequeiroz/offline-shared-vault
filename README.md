@@ -28,6 +28,8 @@ Setup will ask you to fill in some info to generate a server certificate for the
 
 Store or distribute the passphrase pieces.
 
+Store the key pair `gen/masterkey.pem` and `gen/masterkey.pub`. 🚨🚨🚨 Note: running `make setup` again will override the key pair, anything encrypted using the old pair will be lost forever.
+
 ### Encrypt a secret:
 
 `bin/encrypt "my dirty little secret"`
