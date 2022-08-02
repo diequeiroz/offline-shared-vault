@@ -1,7 +1,3 @@
 #!/bin/bash
 
-echo "Waiting for clients to send pieces..."
-
-PASS=$(socat - ssl-l:1443,reuseaddr,cert=gen/server.pem,verify=0 | ssss-combine -x -t 3 -Q 2>&1)
-
-PASS=$PASS SECRET=$1 bash -c 'python bin/rsa-decrypt.py $SECRET'
+SECRET=$1 bash -c 'python bin/server.py $SECRET'

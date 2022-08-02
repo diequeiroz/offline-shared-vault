@@ -11,3 +11,6 @@ setup:
 
 client:
 	socat - ssl:localhost:1443,cafile=gen/server.crt
+
+tunnel:
+	ngrok tcp 1443
