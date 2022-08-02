@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo -n $1 | openssl rsautl -encrypt -pubin -inkey gen/masterkey.pub | base64

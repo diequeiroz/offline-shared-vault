@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Enter 3 pieces of the passphrase (hit enter after each one):"
+
+PASS=$(ssss-combine -x -t 3 -Q 2>&1)
+
+PASS=$PASS SECRET=$1 bash -c 'python bin/rsa-decrypt.py $SECRET'
