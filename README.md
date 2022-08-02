@@ -54,7 +54,7 @@ In other terminal tab, run:
 
 Enter a piece of the passphrase. Repeat this step 2 times.
 
-The decrypted secret should appear on the tab running the `decrypt-remote` script
+The decrypted secret should appear on the tab running the `remote-decrypt` script
 
 ## Next steps:
 
