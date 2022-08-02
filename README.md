@@ -50,7 +50,7 @@ In other terminal tab, run:
 
 `make client`
 
-Enter 3 pieces of the passphrase. After submitting the 3 pieces, hit enter again to breake the socat pipe (will take a look into this later)
+Enter a piece of the passphrase. Repeat this step 2 times.
 
 The decrypted secret should appear on the tab running the `decrypt-remote` script
 
